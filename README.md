@@ -1,5 +1,8 @@
 ## services
 
+- platform service swagger: 
+http://localhost:5284/swagger
+
 - command services swagger : 
 http://localhost:5172/swagger
 
@@ -24,6 +27,7 @@ http://localhost:5172/swagger
     kubectl apply -f platform-np-srv.yaml
     kubectl apply -f ingress-srv.yaml
     kubectl apply -f local-pvc.yaml
+    kubectl apply -f rabbitmq-depl.yaml
 ```
 
 - create secrets

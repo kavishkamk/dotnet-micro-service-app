@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq-dmapp
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-dmapp
+    spec:
+      containers:
+        - name: rabbitmq-dmapp
+          image: rabbitmq:3-management
+          ports:
+            - containerPort: 5672
+              name: rbmq-msg-port
+            - containerPort: 15672
+              name: rbmq-mgmt-port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-dmapp-cluster-ip-src
+spec:
+  type: ClusterIP
+  selector:
+    app: rabbitmq-dmapp
+  ports:
+    - name: rbmq-msg-port
+      protocol: TCP
+      port: 5672
+      targetPort: 5672
+    - name: rbmq-mgmt-port
+      protocol: TCP
+      port: 15672
+      targetPort: 15672
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-dmapp-load-balancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: rabbitmq-dmapp
+  ports:
+    - name: rbmq-msg-port
+      protocol: TCP
+      port: 5672
+      targetPort: 5672
+    - name: rbmq-mgmt-port
+      protocol: TCP
+      port: 15672
+      targetPort: 15672
