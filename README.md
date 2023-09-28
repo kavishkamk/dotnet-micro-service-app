@@ -18,4 +18,11 @@
     kubectl apply -f platform-depl.yaml
     kubectl apply -f platform-np-srv.yaml
     kubectl apply -f ingress-srv.yaml
+    kubectl apply -f local-pvc.yaml
+```
+
+- create secrets
+
+```
+    kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55word!"
 ```
