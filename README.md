@@ -1,3 +1,8 @@
+## services
+
+- command services swagger : 
+http://localhost:5172/swagger
+
 ## requirements
 
 - docker
