@@ -26,7 +26,7 @@ namespace PlatformService.Data
             return _context.Platforms.ToList();
         }
 
-        public Platform GetPlagformById(int id)
+        public Platform? GetPlagformById(int id)
         {
             return _context.Platforms.FirstOrDefault(p => p.Id == id);
         }

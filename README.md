@@ -6,6 +6,9 @@ http://localhost:5284/swagger
 - command services swagger : 
 http://localhost:5172/swagger
 
+- rabbitmq management studio
+http://localhost:15672/
+
 ## requirements
 
 - docker
