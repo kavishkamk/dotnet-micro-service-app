@@ -1,13 +1,27 @@
+## test dontent mocro service app
+
+- dotnet micro service application
+- sql server for database
+- rabbitMQ for event bus
+- Http Sync client
+- Grpc Sync client
+- ingress nginx for api gateway
+- docker and kubernates for deployments
+
+## architectre diagram
+
+<img src="https://github.com/kavishkamk/dotnet-micro-service-app/tree/main/assets/architecture-diagram.png" alt="Architectur" title="Architecture Diagram">
+
 ## services
 
-- platform service swagger: 
-http://localhost:5284/swagger
+- platform service swagger:
+  http://localhost:5284/swagger
 
-- command services swagger : 
-http://localhost:5172/swagger
+- command services swagger :
+  http://localhost:5172/swagger
 
 - rabbitmq management studio
-http://localhost:15672/
+  http://localhost:15672/
 
 ## requirements
 
@@ -18,6 +32,7 @@ http://localhost:15672/
 ## configuration
 
 - add this to host file
+
 ```
 127.0.0.1 dotnetmicrosrvtestapp.dev
 ```
