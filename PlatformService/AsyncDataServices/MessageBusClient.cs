@@ -9,7 +9,7 @@ namespace PlatformService.AsycnDataServices
     {
         private readonly IConfiguration _configuration;
         private readonly IConnection _connection;
-        private readonly IModel _channel;
+        private readonly IModel? _channel;
 
         public MessageBusClient(IConfiguration configuration)
         {
