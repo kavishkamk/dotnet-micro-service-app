@@ -10,7 +10,7 @@
 
 ## architectre diagram
 
-<img src="https://github.com/kavishkamk/dotnet-micro-service-app/tree/main/assets/architecture-diagram.png" alt="Architectur" title="Architecture Diagram">
+<img src="https://github.com/kavishkamk/dotnet-micro-service-app/blob/main/assets/architecture-diagram.png" alt="Architectur" title="Architecture Diagram">
 
 ## services
 
